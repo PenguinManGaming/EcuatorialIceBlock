@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Ecuatorial Ice block</title>
+		<script src="scripts/functions.js"></script>
+		<link rel="stylesheet" href="styles/firstPage.css">
+		<script>
+			const dictionaryFull = {
+				"es": {
+					"first_Page_subtitle": ["Diseño ni moderno ni viejo", "La tierra de las decisiones raras"],
+					"AlternativeHistory": "Ucronías",
+					"PenguinManStuff": "Cosas de PenguinMan",
+					"NoSources": "¿Por qué no añado las fuentes?",
+					"NoOldWeb": "Mi opinión sobre el\"oldweb\"",
+					"NoNewWeb": "Mi opinión sobre la web actual",
+					"WhyEnglish": "¿Por qué prefiero el Inglés?"
+				},
+				"en": {
+					"first_Page_subtitle": ["Formerly Chuck's", "FOREVER under construction", "Neither new or old age web design", "Land of odd choices", "Atypically playing with other people's ideas", "AAAAAAAAAAAAAAAAAAAAAAAAAAAA", "Better dead than corporate", "I'm lots of things! But happy", "Never got proper education", "A bunch of islands"],
+					"AlternativeHistory": "Alternative history scenarios",
+					"PenguinManStuff": "PenguinMan stuff",
+					"NoSources": "Why i don't add sources?",
+					"NoOldWeb": "My opinion on \"oldweb\"",
+					"NoNewWeb": "My opinion on modern web",
+					"WhyEnglish": "Why i prefer English?"
+				}
+			}
+		</script>
+	</head>
+	<body class="mainBody">
+		<header>
+			<select id="lang">
+				<option value="en">English (Lingua Franca)</option>
+				<option value="es">Español (Lingua materna)</option>
+				<option value="ar" disabled>العربية</option>
+			</select>
+			<button id="EnableRunes">Enable runes</button>
+		</header>
+		<h1 id="first_page_title">Ecuatorial Ice block</h1>
+		<h2 id="first_Page_subtitle">...</h2>
+		<img src="assets/images/Working.png" id="Penguin">
+		<aside id="rightside">
+			<b id="AlternativeHistory"></b>
+			<a href="TalesOfBeringia/">Tales of Beringia (EN)</a>
+		</aside>
+		<aside id="leftside">
+			<b id="PenguinManStuff"></b>
+			<a id="NoSources" href="PenguinLand/sources.html"></a>
+			<a id="NoOldWeb"></a>
+			<a id="NoNewWeb"></a>
+			<a id="WhyEnglish"></a>
+		</aside>
+		<script src="scripts/changeLanguage.js"></script>
+		<script src="scripts/runes.js"></script>
+		<script>
+			const Penguin = document.getElementById("Penguin")
+			let penguinY = Penguin.offsetTop - (Penguin.offsetHeight * 1.5);
+			document.getElementById("rightside").childNodes.forEach((element) => {
+				if (element instanceof Element) {
+					element.style.rotate = "-"+Math.atan2(penguinY - element.offsetTop, Penguin.offsetLeft - element.offsetLeft).toString()+"rad"
+				}
+			})
+			document.getElementById("leftside").childNodes.forEach((element) => {
+				if (element instanceof Element) {
+					element.style.rotate = Math.atan2(penguinY - element.offsetTop, Penguin.offsetLeft - element.offsetLeft).toString()+"rad"
+				}
+			})
+		</script>
+	</body>
+</html>

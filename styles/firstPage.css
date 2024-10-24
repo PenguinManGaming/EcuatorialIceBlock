@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+	color: white;
+	font-family: math;
+}
+
+body.mainBody {
+	background: radial-gradient(ellipse at center bottom, #31506d 0%, #0b1416 100%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	height: 100%;
+}
+
+aside {
+	position: absolute;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+h1, aside > b {
+	text-shadow: 0px 0px 10px #96FFFA;
+}
+
+a {
+	text-decoration: none;
+}
+
+main {
+	margin-top: 2vh;
+	margin: 50px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+}
+
+aside > * {
+	margin: 15px;
+}
+
+aside > b {
+	font-size: 25px;
+}
+
+a{
+	color: #96FFFA;
+}
+
+header > a {
+	margin-right: auto;
+}
+
+header {
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+header > * {
+	font-size: 20px;
+	background-color: transparent;
+	border: none;
+	padding: 10px;
+}
+
+
+a:hover {
+	text-shadow: 0px 0px 5px #96FFFA;
+	color: #96FFFA;
+}
+
+option:not(:disabled) {
+	color: black;
+}
+
+h1 {
+	font-size: 80px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 35px;
+	font-weight: bold;
+}
+
+pre {
+	width: 50%;
+	text-wrap: wrap;
+}
+
+ul {
+	width: 45%;
+}
+
+#Penguin {
+	margin-top: 10%;
+}
+
+#leftside {
+	transform: translateX(-20vw) translateY(15vh);
+}
+
+#rightside {
+	transform: translateX(20vw) translateY(15vh);
+}
+
+#EnableRunes {
+	cursor: pointer;
+}
+
+.joke {
+	text-decoration: line-through;
+}
+
+.mainBody {
+	height: 100vh;
+	justify-content: center;
+}
